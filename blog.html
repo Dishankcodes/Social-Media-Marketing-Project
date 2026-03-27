@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TechZones - Premium tech products and digital marketing services. Shop the latest gadgets and grow your business with our expert marketing solutions.">
+    <meta name="keywords"
+        content="tech products, digital marketing, social media marketing, email marketing, SMS marketing, affiliate marketing, video marketing">
+    <title>TechZones - Premium Tech Products & Digital Marketing Services</title>
+<meta name="description" content="Learn how to build and market an e-commerce website step by step. A simple, beginner-friendly guide for students and startups.">
+
+    <link rel="icon"
+        href="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png"
+        type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =====================
+           ROOT VARIABLES
+        ===================== */
+        :root {
+            --primary: #0f7c3a;
+            --primary-dark: #0b5e2c;
+            --gold: #d4af37;
+            --dark: #111827;
+            --gray: #6b7280;
+            --light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            --radius: 14px;
+        }
+
+        /* =====================
+           GLOBAL RESET
+        ===================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* =====================
+           CONTAINER
+        ===================== */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* =====================
+           LINKS & BUTTONS
+        ===================== */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--gold));
+            color: var(--white);
+            padding: 12px 26px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* =====================
+           NAVBAR
+        ===================== */
+        .navbar {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .logo img {
+            width: 38px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+            min-width: 260px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 12px 0;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: 0.25s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 14px 22px;
+            font-weight: 500;
+            color: #111827;
+            white-space: nowrap;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f4f7ff;
+            color: var(--primary);
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =====================
+           BLOG HERO
+        ===================== */
+        .blog-hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(15, 124, 58, 0.9), rgba(212, 175, 55, 0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            color: #fff;
+        }
+
+        .blog-hero-overlay {
+            position: absolute;
+            inset: 0;
+        }
+
+        .blog-hero-content {
+            position: relative;
+            max-width: 800px;
+        }
+
+        .blog-hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .blog-hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* =====================
+           SECTION HEADER
+        ===================== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* =====================
+           BLOG CONTENT
+        ===================== */
+        .blog-content {
+            padding: 80px 0;
+        }
+
+        .blog-main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .blog-section {
+            margin-bottom: 60px;
+        }
+
+        .blog-section h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .blog-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1.1rem;
+            color: #374151;
+        }
+
+        .feature-list li i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        /* =====================
+           CTA SECTION
+        ===================== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--gold));
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* =====================
+           FOOTER
+        ===================== */
+        .footer {
+            background: #0b1220;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            width: 36px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #cbd5e1;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            font-size: 14px;
+        }
+
+        /* =====================
+           WHATSAPP FLOAT
+        ===================== */
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25d366;
+            color: white;
+            font-size: 28px;
+            padding: 14px;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* =====================
+           RESPONSIVE
+        ===================== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                flex-direction: column;
+                cursor: pointer;
+                gap: 4px;
+            }
+
+            .mobile-menu-toggle span {
+                width: 25px;
+                height: 3px;
+                background: var(--dark);
+                transition: 0.3s;
+            }
+
+            .blog-hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* =====================
+   BLOG TYPOGRAPHY UPGRADE
+===================== */
+
+        .blog-main {
+            background: #ffffff;
+            padding: 60px 50px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .blog-section {
+            margin-bottom: 50px;
+        }
+
+        .blog-section h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .blog-section p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #374151;
+            margin-bottom: 18px;
+        }
+
+        /* HR STYLE */
+        .blog-section hr {
+            border: none;
+            height: 2px;
+            width: 100%;
+            margin: 45px 0 10px;
+            background: linear-gradient(to right,
+                    transparent,
+                    var(--primary),
+                    var(--gold),
+                    transparent);
+            opacity: 0.6;
+        }
+
+        /* KEYWORD HIGHLIGHT */
+        .highlight {
+            background: linear-gradient(120deg, #d4af3740, #0f7c3a40);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #0b5e2c;
+        }
+
+        /* FEATURE LIST IMPROVEMENT */
+        .feature-list li {
+            background: #f9fafb;
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .feature-list li:hover {
+            transform: translateX(6px);
+            background: #f1f5f9;
+        }
+
+        /* BLOG IMAGES */
+        .blog-section img {
+            width: 75%;
+            /* 👈 smaller image */
+            max-width: 520px;
+            /* 👈 blog-friendly size */
+            display: block;
+            margin: 30px auto;
+            /* 👈 center aligned */
+            border-radius: 14px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* MOBILE BLOG */
+        @media (max-width: 768px) {
+            .blog-main {
+                padding: 40px 25px;
+            }
+
+            .blog-section h3 {
+                font-size: 1.6rem;
+            }
+
+            .blog-section p {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png"
+                        alt="TechZones Logo">
+                    <span>TechZones</span>
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#products">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product-detail.html">Headphones</a></li>
+                            <li><a href="product-detail.html">Smartwatches</a></li>
+                            <li><a href="product-detail.html">Earbuds</a></li>
+                            <li><a href="product-detail.html">Speakers</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                            <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                            <li><a href="video-marketing.html">Video Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span
+                                class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>E-commerce Marketing Website: Complete Guide for Beginners</h1>
+            <p>Learn how to build, manage, and promote a professional
+                <span class="highlight">e-commerce website</span> step by step.
+            </p>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-main">
+
+                <!-- INTRO -->
+                <div class="blog-section">
+                    <h3>Introduction</h3>
+                    <p>
+                        <span class="highlight">E-commerce marketing websites</span> help businesses sell products
+                        online
+                        and reach customers worldwide. This guide is designed for
+                        <span class="highlight">students and beginners</span> who want to learn
+                        online business fundamentals.
+                    </p>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+                    <hr>
+                </div>
+
+                <!-- STEP BY STEP -->
+                <div class="blog-section">
+                    <h3>How to Make an E-commerce Website Step by Step</h3>
+                    <p>
+                        Learning <span class="highlight">how to make an e-commerce website step by step</span>
+                        helps beginners understand the complete development process.
+                    </p>
+                    <p>
+                        It includes choosing a platform, registering a domain name,
+                        designing product pages, adding
+                        <span class="highlight">secure payment gateways</span>,
+                        and launching the website.
+                    </p>
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c">
+                    <hr>
+                </div>
+
+                <!-- IMPORTANCE -->
+                <div class="blog-section">
+                    <h3>Importance of E-commerce Marketing for Small Businesses</h3>
+                    <p>
+                        <span class="highlight">E-commerce marketing</span> allows small businesses
+                        to compete with large brands using digital tools.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-globe"></i> Global reach without physical stores</li>
+                        <li><i class="fas fa-wallet"></i> Lower operational costs</li>
+                        <li><i class="fas fa-bullhorn"></i> Easy promotion through social media</li>
+                    </ul>
+                    <hr>
+                </div>
+
+                <!-- BEGINNERS -->
+                <div class="blog-section">
+                    <h3>E-commerce Website Making for Beginners</h3>
+                    <p>
+                        <span class="highlight">E-commerce website making for beginners</span>
+                        focuses on easy platforms like Shopify, WordPress, and Wix.
+                    </p>
+                    <p>
+                        These tools allow users to create
+                        <span class="highlight">online stores</span> using templates,
+                        drag-and-drop builders, and simple hosting solutions.
+                    </p>
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698">
+                    <hr>
+                </div>
+
+                <!-- STUDENTS -->
+                <div class="blog-section">
+                    <h3>E-commerce Website Guide for Students</h3>
+                    <p>
+                        This <span class="highlight">e-commerce making website guide for students</span>
+                        helps learners gain practical skills for projects, internships,
+                        freelancing, and startups.
+                    </p>
+                    <p>
+                        Students learn website structure, product listing,
+                        digital payments, and basic
+                        <span class="highlight">digital marketing</span> strategies.
+                    </p>
+                    <hr>
+                </div>
+
+                <!-- FEATURES -->
+                <div class="blog-section">
+                    <h3>Key Features of a Good E-commerce Marketing Website</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-mobile-alt"></i> Mobile-friendly responsive design</li>
+                        <li><i class="fas fa-lock"></i> SSL security and trusted payments</li>
+                        <li><i class="fas fa-search"></i> Fast search and filters</li>
+                        <li><i class="fas fa-star"></i> Customer reviews and ratings</li>
+                    </ul>
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3">
+                    <hr>
+                </div>
+
+                <!-- COST -->
+                <div class="blog-section">
+                    <h3>Cost to Make an E-commerce Website in India</h3>
+                    <p>
+                        The <span class="highlight">cost to make an e-commerce website in India</span>
+                        depends on platform, design, features, and marketing tools.
+                    </p>
+                    <p>
+                        Basic websites are affordable for students,
+                        while advanced stores require higher investment.
+                    </p>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Launch Your Online Store?</h2>
+        <p>TechZones helps beginners build professional e-commerce websites.</p>
+        <a href="#" class="btn">Get Started Today</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png"
+                            alt="TechZones">
+                        <span>TechZones</span>
+                    </div>
+                    <p>Your trusted partner for digital marketing and e-commerce solutions.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <a href="social-media-marketing.html">Social Media Marketing</a>
+                    <a href="email-marketing.html">Email Marketing</a>
+                    <a href="sms-marketing.html">SMS Marketing</a>
+                    <a href="video-marketing.html">Video Marketing</a>
+                </div>
+                <div>
+                    <h4>Products</h4>
+                    <a href="product-detail.html">Headphones</a>
+                    <a href="product-detail.html">Smartwatches</a>
+                    <a href="product-detail.html">Earbuds</a>
+                    <a href="product-detail.html">Speakers</a>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> hello@techzones.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechZones. All rights reserved. | Made with ❤️ for digital success</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Cart count functionality (demo)
+        document.getElementById('cartCount').textContent = '2';
+    </script>
+</body>
+
+</html>

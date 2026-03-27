@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Marketing Services | TechZones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+        }
+
+        /* =====================
+           CARDS
+        ===================== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+    
+     
+    </style>
+</head>
+
+<body>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png"
+                        alt="TechZones Logo">
+                    <span>TechZones</span>
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li class="dropdown">
+                        <a href="#services" class="active">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                            <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                            <li><a href="video-marketing.html">Video Marketing</a></li>
+                            <li><a href="mobile-marketing.html">Mobile Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span
+                                class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+     <!-- Service Hero -->
+     <section class="service-hero">
+        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/af6d398a-7df9-44e7-8703-98fc32e3920b.png"
+            alt="Email Marketing" class="service-hero-bg">
+        <div class="service-hero-overlay"></div>
+        <div class="container">
+            <div class="service-hero-content">
+                <h1>Mobile Marketing Services</h1>
+                <p>Reach customers directly on their smartphones using powerful, 
+                    data-driven mobile marketing strategies.</p>
+         </p>
+                <a href="contact.html" class="btn-primary btn-large">Start Your Campaign</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPES -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Types of Mobile Marketing</h2>
+                <p>Different ways to engage users through mobile devices</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-sms"></i>
+                    <h3>SMS Marketing</h3>
+                    <p>Promotional messages, offers, OTPs, and alerts sent directly to customer phones.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Push Notifications</h3>
+                    <p>Instant notifications through apps or browsers to re-engage users.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location-Based Marketing</h3>
+                    <p>Target users based on location using GPS and geofencing.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-ad"></i>
+                    <h3>In-App Advertising</h3>
+                    <p>Ads displayed inside mobile apps to reach relevant audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME MARKETING -->
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Game Marketing</h2>
+            <p>Promote mobile games and engage players through immersive strategies</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-gamepad"></i>
+                <h3>User Acquisition Campaigns</h3>
+                <p>Run targeted ads on gaming platforms, social media, and ad networks to attract high-quality players.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-trophy"></i>
+                <h3>Reward-Based Advertising</h3>
+                <p>Offer in-game rewards such as coins, lives, or power-ups in exchange for ad engagement.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Player Retention Strategies</h3>
+                <p>Engage players with daily rewards, push notifications, events, and leaderboard challenges.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Performance Tracking</h3>
+                <p>Analyze installs, in-app behavior, session duration, and monetization metrics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- IN-APP MARKETING -->
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>In-App Marketing</h2>
+            <p>Engage users inside mobile apps to increase retention and conversions</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>In-App Messages</h3>
+                <p>Send contextual messages to users while they are actively using your app.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>In-App Promotions</h3>
+                <p>Promote offers, upgrades, subscriptions, or new features directly inside the app.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-check"></i>
+                <h3>Personalized User Experience</h3>
+                <p>Deliver personalized content based on user behavior, preferences, and engagement history.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Conversion Optimization</h3>
+                <p>Guide users through smooth purchase journeys with minimal friction.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- WHAT TO DO -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Do in Mobile Marketing</h2>
+                <p>Our proven execution strategy</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h3>Audience Targeting</h3>
+                    <p>Identify the right users based on behavior, interest, and demographics.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>Campaign Creation</h3>
+                    <p>Design high-converting messages with clear CTA and personalization.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analytics & Tracking</h3>
+                    <p>Track clicks, conversions, delivery rate, and engagement.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Optimization</h3>
+                    <p>Improve campaigns continuously using data insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Boost Your Mobile Marketing?</h2>
+                <p>Let's create campaigns that convert</p>
+                <a href="contact.html" class="btn-primary btn-large">Get a Free Strategy Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png"
+                            alt="TechZones Logo">
+                        <span>TechZones</span>
+                    </div>
+                    <p>Your trusted partner for premium tech products and expert digital marketing solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                        <li><a href="email-marketing.html">Email Marketing</a></li>
+                        <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                        <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                        <li><a href="video-marketing.html">Video Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                data-cfemail="70191e161f30041513180a1f1e15035e131f1d">[email&#160;protected]</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechZones. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Wireless Headphones - Experience crystal-clear audio with active noise cancellation">
+    <title>Premium Wireless Headphones - TechZones</title>
+    <link rel="icon" href="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png" alt="TechZones Logo">
+                    <span>TechZones</span>
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#products">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product-detail.html">Headphones</a></li>
+                            <li><a href="product-detail.html">Smartwatches</a></li>
+                            <li><a href="product-detail.html">Earbuds</a></li>
+                            <li><a href="product-detail.html">Speakers</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                            <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                            <li><a href="video-marketing.html">Video Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="index.html#products">Products</a> / <span>Premium Wireless Headphones</span>
+            </div>
+
+            <div class="product-detail-grid">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/3ea6e5d7-3b7d-4869-bbfa-b37b3968691a.png" alt="Premium Wireless Headphones">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/3ea6e5d7-3b7d-4869-bbfa-b37b3968691a.png" alt="View 1" onclick="changeImage(this.src)" class="active">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/3ea6e5d7-3b7d-4869-bbfa-b37b3968691a.png" alt="View 2" onclick="changeImage(this.src)">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/3ea6e5d7-3b7d-4869-bbfa-b37b3968691a.png" alt="View 3" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h1>Premium Wireless Headphones</h1>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5 out of 5 - 234 reviews)</span>
+                    </div>
+
+                    <div class="product-price-detail">
+                        <span class="price-current">$149.99</span>
+                        <span class="price-original">$199.99</span>
+                        <span class="discount-badge">25% OFF</span>
+                    </div>
+
+                    <p class="product-description-detail">
+                        Experience premium audio quality with our flagship wireless headphones. Featuring active noise cancellation, 30-hour battery life, and premium comfort padding for all-day wear. Perfect for music lovers, professionals, and travelers.
+                    </p>
+
+                    <div class="product-features">
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Active Noise Cancellation (ANC)</li>
+                            <li><i class="fas fa-check-circle"></i> 30-Hour Battery Life</li>
+                            <li><i class="fas fa-check-circle"></i> Premium Sound Quality</li>
+                            <li><i class="fas fa-check-circle"></i> Bluetooth 5.0 Connectivity</li>
+                            <li><i class="fas fa-check-circle"></i> Foldable Design</li>
+                            <li><i class="fas fa-check-circle"></i> Built-in Microphone</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <button class="color-btn active" style="background: #000;" title="Black"></button>
+                                <button class="color-btn" style="background: #fff; border: 1px solid #ddd;" title="White"></button>
+                                <button class="color-btn" style="background: #0F7C3A;" title="Green"></button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button onclick="decreaseQuantity()">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button onclick="increaseQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions-detail">
+                        <button class="btn-primary btn-large" onclick="addToCartDetail()">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn-secondary btn-large" onclick="buyNow()">
+                            <i class="fas fa-bolt"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> TZ-HP-001</p>
+                        <p><strong>Category:</strong> Audio Devices</p>
+                        <p><strong>Tags:</strong> Wireless, Headphones, ANC, Premium</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Specifications -->
+            <div class="product-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('specs')">Specifications</button>
+                    <button class="tab-btn" onclick="showTab('reviews')">Reviews</button>
+                    <button class="tab-btn" onclick="showTab('shipping')">Shipping Info</button>
+                </div>
+
+                <div class="tab-content active" id="specs">
+                    <h3>Technical Specifications</h3>
+                    <table class="specs-table">
+                        <tr><td>Driver Size</td><td>40mm</td></tr>
+                        <tr><td>Frequency Response</td><td>20Hz - 20kHz</td></tr>
+                        <tr><td>Impedance</td><td>32 Ohms</td></tr>
+                        <tr><td>Battery Life</td><td>30 hours (ANC off), 20 hours (ANC on)</td></tr>
+                        <tr><td>Charging Time</td><td>2 hours</td></tr>
+                        <tr><td>Bluetooth Version</td><td>5.0</td></tr>
+                        <tr><td>Weight</td><td>250g</td></tr>
+                        <tr><td>Warranty</td><td>1 Year Manufacturer Warranty</td></tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review-summary">
+                        <div class="rating-overview">
+                            <h2>4.5</h2>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Based on 234 reviews</p>
+                        </div>
+                    </div>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <strong>John D.</strong>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Excellent sound quality and the noise cancellation is impressive. Battery lasts all day!"</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <strong>Maria S.</strong>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Very comfortable for long listening sessions. Great value for the price."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <ul class="shipping-info">
+                        <li><i class="fas fa-truck"></i> Free shipping on orders over $50</li>
+                        <li><i class="fas fa-clock"></i> Standard delivery: 3-5 business days</li>
+                        <li><i class="fas fa-shipping-fast"></i> Express delivery: 1-2 business days</li>
+                        <li><i class="fas fa-undo"></i> 30-day return policy</li>
+                        <li><i class="fas fa-shield-alt"></i> 1-year warranty included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>Related Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/317f97dd-a547-4659-bd3b-5eb757921cf0.png" alt="Smart Fitness Watch">
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Fitness Watch</h3>
+                            <div class="product-price">
+                                <span class="price-current">$199.99</span>
+                            </div>
+                            <button class="btn-primary" onclick="addToCart('Smart Fitness Watch', 199.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/317f97dd-a547-4659-bd3b-5eb757921cf0.png')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/7c5a4843-102f-49c9-afaf-ab1f45b7b8d8.png" alt="True Wireless Earbuds">
+                        </div>
+                        <div class="product-info">
+                            <h3>True Wireless Earbuds</h3>
+                            <div class="product-price">
+                                <span class="price-current">$89.99</span>
+                            </div>
+                            <button class="btn-primary" onclick="addToCart('True Wireless Earbuds', 89.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/7c5a4843-102f-49c9-afaf-ab1f45b7b8d8.png')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/e6a862e0-790e-4c78-bc63-cbe51d83f249.png" alt="Portable Bluetooth Speaker">
+                        </div>
+                        <div class="product-info">
+                            <h3>Portable Bluetooth Speaker</h3>
+                            <div class="product-price">
+                                <span class="price-current">$79.99</span>
+                            </div>
+                            <button class="btn-primary" onclick="addToCart('Portable Bluetooth Speaker', 79.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/e6a862e0-790e-4c78-bc63-cbe51d83f249.png')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png" alt="TechZones Logo">
+                        <span>TechZones</span>
+                    </div>
+                    <p>Your trusted partner for premium tech products and expert digital marketing solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                        <li><a href="email-marketing.html">Email Marketing</a></li>
+                        <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                        <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                        <li><a href="video-marketing.html">Video Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0960676f66497d6c6a617366676c7a276a6664">[email&#160;protected]</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechZones. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./script.js"></script>
+</body>
+</html>

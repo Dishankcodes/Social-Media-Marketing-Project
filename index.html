@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechZones - Premium tech products and digital marketing services. Shop the latest gadgets and grow your business with our expert marketing solutions.">
+    <meta name="keywords" content="tech products, digital marketing, social media marketing, email marketing, SMS marketing, affiliate marketing, video marketing">
+    <title>TechZones - Premium Tech Products & Digital Marketing Services</title>
+    <link rel="icon" href="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Discount Popup -->
+    <div id="discountPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <h2>🎉 Special Offer!</h2>
+            <p>Get <strong>20% OFF</strong> on your first purchase</p>
+            <div class="coupon-code">USE CODE: <span>TECHZONE20</span></div>
+            <button class="btn-primary" onclick="closePopup()">Shop Now</button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png" alt="TechZones Logo">
+                    <span>TechZones</span>
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#products">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product-detail.html">Headphones</a></li>
+                            <li><a href="product-detail.html">Smartwatches</a></li>
+                            <li><a href="product-detail.html">Earbuds</a></li>
+                            <li><a href="product-detail.html">Speakers</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                            <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                            <li><a href="video-marketing.html">Video Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="text-gold">TechZones</span></h1>
+                <p>
+                    Building a successful online store starts with understanding 
+                    <strong>how to build an e-commerce marketing website</strong>.
+                </p>
+                <p class="hero-subtitle">Premium Tech Products & Expert Digital Marketing Solutions</p>
+                <p class="hero-description">Discover cutting-edge technology and grow your business with our comprehensive marketing services</p>
+                <BR><p>
+                    Implementing a strong <strong>SEO strategy for e-commerce marketing websites</strong>
+                      This strategy includes keyword-optimized product pages, 
+                     technical SEO improvements content creation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Shop Products</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers-banner">
+        <div class="container">
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="offer-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% protected</p>
+                </div>
+                <div class="offer-card">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="offer-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Discover our premium collection of tech gadgets</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/3ea6e5d7-3b7d-4869-bbfa-b37b3968691a.png" alt="Premium Wireless Headphones">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Wireless Headphones</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-description">Experience crystal-clear audio with active noise cancellation and 30-hour battery life</p>
+                        <div class="product-price">
+                            <span class="price-current">$149.99</span>
+                            <span class="price-original">$199.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Premium Wireless Headphones', 149.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/3ea6e5d7-3b7d-4869-bbfa-b37b3968691a.png')">Add to Cart</button>
+                            <a href="product-detail.html" class="btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/317f97dd-a547-4659-bd3b-5eb757921cf0.png" alt="Smart Fitness Watch">
+                        <div class="product-badge sale">Sale</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Fitness Watch</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="product-description">Track your health and fitness goals with advanced sensors and GPS navigation</p>
+                        <div class="product-price">
+                            <span class="price-current">$199.99</span>
+                            <span class="price-original">$299.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Smart Fitness Watch', 199.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/317f97dd-a547-4659-bd3b-5eb757921cf0.png')">Add to Cart</button>
+                            <a href="product-detail.html" class="btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/7c5a4843-102f-49c9-afaf-ab1f45b7b8d8.png" alt="True Wireless Earbuds">
+                    </div>
+                    <div class="product-info">
+                        <h3>True Wireless Earbuds</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <p class="product-description">Compact design with premium sound quality and wireless charging case</p>
+                        <div class="product-price">
+                            <span class="price-current">$89.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('True Wireless Earbuds', 89.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/7c5a4843-102f-49c9-afaf-ab1f45b7b8d8.png')">Add to Cart</button>
+                            <a href="product-detail.html" class="btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/e6a862e0-790e-4c78-bc63-cbe51d83f249.png" alt="Portable Bluetooth Speaker">
+                        <div class="product-badge">Hot</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portable Bluetooth Speaker</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <p class="product-description">Powerful 360° sound with waterproof design and 20-hour playtime</p>
+                        <div class="product-price">
+                            <span class="price-current">$79.99</span>
+                            <span class="price-original">$99.99</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart('Portable Bluetooth Speaker', 79.99, 'https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/e6a862e0-790e-4c78-bc63-cbe51d83f249.png')">Add to Cart</button>
+                            <a href="product-detail.html" class="btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Services -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Digital Marketing Services</h2>
+                <p>Grow your business with our expert marketing solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Social Media Marketing</h3>
+                    <p>Build your brand presence across all major social platforms with engaging content and targeted campaigns</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Content Strategy</li>
+                        <li><i class="fas fa-check"></i> Community Management</li>
+                        <li><i class="fas fa-check"></i> Paid Advertising</li>
+                    </ul>
+                    <a href="social-media-marketing.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Marketing</h3>
+                    <p>Reach your customers directly with personalized email campaigns that drive conversions and build loyalty</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Campaign Design</li>
+                        <li><i class="fas fa-check"></i> Automation</li>
+                        <li><i class="fas fa-check"></i> Analytics</li>
+                    </ul>
+                    <a href="email-marketing.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sms"></i>
+                    </div>
+                    <h3>SMS Marketing</h3>
+                    <p>Connect instantly with customers through targeted SMS campaigns with high open rates and engagement</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Bulk Messaging</li>
+                        <li><i class="fas fa-check"></i> Personalization</li>
+                        <li><i class="fas fa-check"></i> Real-time Delivery</li>
+                    </ul>
+                    <a href="sms-marketing.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Affiliate Marketing</h3>
+                    <p>Expand your reach through strategic partnerships and performance-based marketing programs</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Partner Network</li>
+                        <li><i class="fas fa-check"></i> Commission Tracking</li>
+                        <li><i class="fas fa-check"></i> Performance Reports</li>
+                    </ul>
+                    <a href="affiliate-marketing.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Marketing</h3>
+                    <p>Engage your audience with compelling video content that tells your brand story and drives action</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Video Production</li>
+                        <li><i class="fas fa-check"></i> YouTube Optimization</li>
+                        <li><i class="fas fa-check"></i> Video Ads</li>
+                    </ul>
+                    <a href="video-marketing.html" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real results from real businesses</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/373a6c2e-91dc-4e43-babc-cc667a93b158.png" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"TechZones transformed our social media presence. We saw a 300% increase in engagement within just 3 months. Their team is professional, creative, and delivers results!"</p>
+                        <h4>Sarah Johnson</h4>
+                        <span>CEO, Digital Innovations Inc.</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/8e9c5bd1-5a17-4026-adaa-385690b874b1.png" alt="Michael Chen">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The email marketing campaigns from TechZones generated a 45% conversion rate for our product launch. Outstanding service and incredible ROI!"</p>
+                        <h4>Michael Chen</h4>
+                        <span>Marketing Director, TechStart Solutions</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/20c829f1-0658-493a-8ac4-44a3a89e2e66.png" alt="Emily Rodriguez">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Their video marketing strategy helped us reach 2 million views on our campaign. The quality of products is also exceptional. Highly recommended!"</p>
+                        <h4>Emily Rodriguez</h4>
+                        <span>Founder, Creative Ventures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive deals and marketing tips</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/873948/2025-12-30/6bb0c2bf-5167-4d1f-bd30-060dac8ca190.png" alt="TechZones Logo">
+                        <span>TechZones</span>
+                    </div>
+                    <p>Your trusted partner for premium tech products and expert digital marketing solutions.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                        <li><a href="email-marketing.html">Email Marketing</a></li>
+                        <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                        <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
+                        <li><a href="video-marketing.html">Video Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="50393e363f10243533382a3f3e35237e333f3d">[email&#160;protected]</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechZones. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./script.js"></script>
+</body>
+</html>
